@@ -22,11 +22,9 @@ for line in file:
         line = line.replace("eight", "8")
     if "nine" in line:
         line = line.replace("nine", "9")
-    print(line, end="")
     num1 = re.search("(\d).*", line).group(1)
     num2 = re.search(".*(\d)", line).group(1)
     combined.append(int(num1 + num2))
-print(combined)
 print(sum(combined))
 
 #Answer is 
